@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Countries</string>
+    <string name="error_message">An Error occured while fetching data</string>
+
+
+
+
+</resources>

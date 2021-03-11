@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by Madhav Sapkota on 3/11/21 8:12 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 3/11/21 8:12 AM
+  ~  */
+  -->
+
+<resources>
+    <dimen name="layout_height">100dp</dimen>
+    <dimen name="standard_padding">8dp</dimen>
+</resources>
