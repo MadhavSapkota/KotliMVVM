@@ -11,6 +11,8 @@ package viewmodel
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import dagger.android.DaggerApplication
+import di.DaggerApiComponent
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -21,9 +23,16 @@ import io.reactivex.schedulers.Schedulers.newThread
 import model.CountriesService
 import model.Country
 import java.util.concurrent.ScheduledExecutorService
+import javax.inject.Inject
 
 class ListViewModel: ViewModel() {
-    private val countriesService = CountriesService()
+    @Inject
+    lateinit var countriesService:CountriesService
+
+    init {
+        DaggerApiComponent.create().inject(this)
+    }
+
     private val disposable = CompositeDisposable()
 
 

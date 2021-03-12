@@ -5,6 +5,7 @@ plugins {
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin : 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -76,9 +77,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation "org.mockito:mockito-inline:$mockitoVersion"
     testImplementation 'android.arch.core:core-testing:1.1.1'
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+
 
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
 }
 
 
